@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="TimeTable" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q9x-vk-e41">
+                                <rect key="frame" x="369" y="273" width="80" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
+                                <state key="normal" title="Child Mode">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLQ-Ij-9I9">
+                                <rect key="frame" x="151" y="273" width="89" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
+                                <state key="normal" title="Parent Mode">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="parentButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G78-QK-ir1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Time Table For Elementary-Age Child " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yw4-wC-SIg">
+                                <rect key="frame" x="100" y="176" width="401" height="29"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="32"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="yw4-wC-SIg" secondAttribute="centerX" id="1Sw-zs-gJ8"/>
+                            <constraint firstItem="Q9x-vk-e41" firstAttribute="trailing" secondItem="yw4-wC-SIg" secondAttribute="trailing" constant="-52" id="2OU-r0-5wt"/>
+                            <constraint firstItem="dLQ-Ij-9I9" firstAttribute="top" secondItem="yw4-wC-SIg" secondAttribute="bottom" constant="68" id="NMz-S3-41D"/>
+                            <constraint firstAttribute="centerX" secondItem="yw4-wC-SIg" secondAttribute="centerX" id="OBa-FF-p3X"/>
+                            <constraint firstItem="yw4-wC-SIg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="156" id="PCf-Yp-yvf"/>
+                            <constraint firstAttribute="centerX" secondItem="yw4-wC-SIg" secondAttribute="centerX" id="Y3H-DH-qBZ"/>
+                            <constraint firstAttribute="centerX" secondItem="yw4-wC-SIg" secondAttribute="centerX" id="Zqb-kL-G3C"/>
+                            <constraint firstItem="yw4-wC-SIg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dj2-zP-6S5"/>
+                            <constraint firstItem="yw4-wC-SIg" firstAttribute="leading" secondItem="dLQ-Ij-9I9" secondAttribute="leading" constant="-51" id="iho-Eb-ETK"/>
+                            <constraint firstItem="dLQ-Ij-9I9" firstAttribute="baseline" secondItem="Q9x-vk-e41" secondAttribute="baseline" id="pq1-a9-Q7E"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="parentButton" destination="dLQ-Ij-9I9" id="VWg-X2-GUR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
